@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const PageContainer = styled.main`
+export const PagePostContainer = styled.main`
   display: flex;
   flex-direction: column;
 
@@ -17,6 +17,9 @@ export const MainContent = styled.main`
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    margin-top: 4rem;
   }
+`;
+
+export const PostContent = styled.main`
+  padding: 2.5rem 2rem;
 `;

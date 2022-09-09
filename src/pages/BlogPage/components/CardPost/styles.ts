@@ -4,18 +4,22 @@ export const CardPostContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 2rem;
-
   width: 100%;
   max-width: 26rem;
   max-height: 16.25rem;
 
   padding: 2rem;
   border-radius: 10px;
+  border: solid 2px transparent;
 
   background-color: ${props => props.theme["base-post"]};
 
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &:hover {
+    border: solid 2px ${props => props.theme["base-label"]};
+  }
 
   ::-webkit-scrollbar {
     width: 4px;

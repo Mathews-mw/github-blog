@@ -1,22 +1,22 @@
+import { BrowserRouter } from 'react-router-dom'
+
 import { ThemeProvider } from "styled-components"
-import { Footer } from "./components/Footer"
-import { Header } from "./components/Header"
-import { BlogPage } from "./pages/BlogPage"
 import { GlobalStyle } from "./styles/global"
 import { defaultTheme } from "./styles/themes/default"
+import { Router } from './Router'
+import { IssuesContextProvider } from './contexts/IssuesContext'
 
 function App() {
-
   return (
     <ThemeProvider theme={defaultTheme}>
+      
+      <BrowserRouter>
+        <IssuesContextProvider>
+          <Router />
+        </IssuesContextProvider>
+      </BrowserRouter>
+
       <GlobalStyle />
-      
-      <Header />
-
-      <BlogPage />
-
-      <Footer/>
-      
     </ThemeProvider>
   )
 }

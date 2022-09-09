@@ -29,6 +29,10 @@ export const SearchFormContainer = styled.div`
     color: ${props => props.theme["base-label"]};
   }
 
+  input:focus {
+    color: ${props => props.theme["base-text"]}
+  }
+
   button {
     display: flex;
     align-items: center;
